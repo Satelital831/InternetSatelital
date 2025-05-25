@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos - Internet Satelital</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <aside class="menu">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="catalogo.html">Catálogo de Productos</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+<li><a href="clientes-satisfechos.html">Clientes Satisfechos</a></li>
+
+            <li><a href="soporte.html">Soporte</a></li>
+        </ul>
+    </aside>
+
+    <main class="contenido">
+        <section class="catalogo">
+            <h1>Catálogo de Productos</h1>
+            <p>Explora nuestros productos y servicios disponibles.</p>
+
+            <div class="filtros">
+                <label>Filtrar por categoría:
+                    <select id="categoriaFiltro">
+                        <option value="todos">Todos</option>
+                        <option value="impresion">Impresión</option>
+                        <option value="papeleria">Papelería</option>
+                        <option value="servicios">Servicios Digitales</option>
+                    </select>
+                </label>
+
+                <label>Filtrar por precio:
+                    <input type="number" id="precioFiltro" placeholder="Máximo $">
+                </label>
+
+                <button onclick="filtrarProductos()">Aplicar Filtros</button>
+            </div>
+
+            <div class="productos-catalogo" id="productosCatalogo">
+                <!-- Aquí van los productos generados por JavaScript -->
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Internet Satelital - Todos los derechos reservados.</p>
+        </footer>
+<button onclick="mostrarCarrito()">Ver Carrito</button> <!-- Botón para abrir carrito -->
+
+    </main>
+</body>
+</html>

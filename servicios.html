@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Internet Satelital</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <aside class="menu">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="catalogo.html">Catálogo de Productos</a></li>
+            <li><a href="ubicacion.html">Ubicación</a></li>
+<li><a href="clientes-satisfechos.html">Clientes Satisfechos</a></li>
+
+            <li><a href="soporte.html">Soporte</a></li>
+        </ul>
+    </aside>
+
+    <main class="contenido">
+        <section class="servicios">
+            <h1>Servicios y Productos</h1>
+            <p>Selecciona los productos que deseas comprar y calcula el total.</p>
+
+            <div class="productos">
+                <label><input type="checkbox" value="15" data-nombre="Impresión B/N"> Impresión B/N - $15</label>
+                <label><input type="checkbox" value="20" data-nombre="Impresión Color"> Impresión Color - $20</label>
+                <label><input type="checkbox" value="10" data-nombre="Fotocopias"> Fotocopias - $10</label>
+                <label><input type="checkbox" value="50" data-nombre="Renta de PC"> Renta de PC - $50</label>
+                <label><input type="checkbox" value="30" data-nombre="Digitalización"> Digitalización - $30</label>
+                <label><input type="checkbox" value="40" data-nombre="Encuadernado"> Encuadernado - $40</label>
+                <label><input type="checkbox" value="5" data-nombre="Pluma Azul"> Pluma Azul - $5</label>
+                <label><input type="checkbox" value="5" data-nombre="Pluma Negra"> Pluma Negra - $5</label>
+                <label><input type="checkbox" value="25" data-nombre="Hojas Blancas 100pz"> Hojas Blancas 100pz - $25</label>
+                <label><input type="checkbox" value="15" data-nombre="Pegamento"> Pegamento - $15</label>
+            </div>
+
+            <button onclick="calcularTotal()">Calcular Total</button>
+            <h2>Total: $<span id="total">0</span></h2>
+
+            <button onclick="mostrarLogin()">Generar Ticket</button>
+        </section>
+
+        <div id="login" class="login oculto">
+            <h2>Iniciar Sesión</h2>
+            <label>Usuario:</label>
+            <input type="text" id="usuario" required>
+            <label>Contraseña:</label>
+            <input type="password" id="password" required>
+            <button onclick="iniciarSesion()">Iniciar Sesión</button>
+        </div>
+
+        <div id="loading" class="loading oculto">
+            <p>Cargando...</p>
+            <div class="barra">
+                <div id="barraCarga"></div>
+            </div>
+        </div>
+
+       <div id="ticket" class="ticket oculto">
+    <h2>Internet Satelital</h2>
+    <p><strong>Fecha y hora:</strong> <span id="fechaHora"></span></p>
+    <p><strong>Usuario:</strong> <span id="nombreUsuario"></span></p>
+    <div id="detalle-compra"></div> <!-- Cambié el formato de los productos -->
+    <h2>Total: $<span id="totalTicket"></span></h2>
+    <p>Contacto: sinternet121@gmail.com</p>
+    <p>¡Gracias por su compra!</p>
+    <button onclick="window.print()">Imprimir Ticket</button>
+</div>
+<div id="carrito" class="carrito oculto">
+    <h2>Carrito de Compras</h2>
+    <div id="listaCarrito"></div> <!-- Aquí se mostrarán los productos agregados -->
+    <h2>Total: $<span id="totalCarrito">0</span></h2>
+    <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+</div>
+
+
+        <footer>
+            <p>&copy; 2025 Internet Satelital - Todos los derechos reservados.</p>
+        </footer>
+    </main>
+</body>
+</html>

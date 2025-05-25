@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de Compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="ticket-container">
+        <h2>Internet Satelital</h2>
+        <p><strong>Fecha y hora:</strong> <span id="fechaHora"></span></p>
+        <p><strong>Usuario:</strong> <span id="nombreUsuario"></span></p>
+        <div id="detalle-compra"></div>
+        <h2>Total: $<span id="totalTicket"></span></h2>
+        <p>Contacto: sinternet121@gmail.com</p>
+        <p>¡Gracias por su compra!</p>
+        <button onclick="window.print()">Imprimir Ticket</button>
+        <button onclick="window.location.href='servicios.html'">Volver a Servicios</button> <!-- Nuevo botón -->
+    <div id="detalle-compra"></div> <!-- Aquí aparecerán los productos de ambos métodos -->
+
+</main>
+
+    <script src="script.js"></script>
+</body>
+</html>
