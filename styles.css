@@ -86,8 +86,8 @@ footer {
 }
 
 .inicio img {
-    width: 80%;
-    max-width: 450px;
+    max-width: 300px; /* Ahora la imagen no será más grande que 300px */
+    width: 60%; /* Se adapta de forma responsiva sin ocupar demasiado espacio */
     border-radius: 10px;
     margin-top: 20px;
     animation: animarImagen 3s infinite ease-in-out;
